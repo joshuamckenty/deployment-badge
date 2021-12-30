@@ -1,0 +1,26 @@
+{
+  "name": "deployment-badge",
+  "version": "1.1.0",
+  "description": "This is a package for Next.js applications. It makes possible the easy integration of an API endpoint to create shields.io badges displaying the deployment status, by using the Github API.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [
+    "deployment",
+    "badges",
+    "Next.js"
+  ],
+  "author": "Felix Mohr",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.8",
+    "@types/next": "^9.0.0",
+    "tsc": "^1.20150623.0",
+    "typescript": "^4.1.2"
+  },
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
