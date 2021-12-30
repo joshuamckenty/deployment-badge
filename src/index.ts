@@ -39,7 +39,7 @@ const deploymentBadgeHandler = async (req: NextApiRequest, res: NextApiResponse,
         fetch(options.deploymentsUrl, {
             ...options, 
             headers: {
-                'Authorization': 'Basic ' + btoa(`${process.env.GITHUB_USER}:${process.env.GITHUB_PAT}`)
+                'Authorization': 'Basic ' + Buffer.from(`${process.env.GITHUB_USER}:${process.env.GITHUB_PAT}`).toString('base64')
             }
         })
             .then((response) => response.json())
@@ -54,7 +54,7 @@ const deploymentBadgeHandler = async (req: NextApiRequest, res: NextApiResponse,
         fetch(statusesUrl, {
             ...options, 
             headers: {
-                'Authorization': 'Basic ' + btoa(`${process.env.GITHUB_USER}:${process.env.GITHUB_PAT}`)
+                'Authorization': 'Basic ' + Buffer.from(`${process.env.GITHUB_USER}:${process.env.GITHUB_PAT}`).toString('base64')
             }
         })
             .then((response) => response.json())
